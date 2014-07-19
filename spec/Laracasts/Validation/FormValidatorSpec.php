@@ -17,9 +17,9 @@ class FormValidatorSpec extends ObjectBehavior
 
 	function it_validates_a_set_of_valid_data(FactoryInterface $validatorFactory, ValidatorInterface $validator)
 	{
-		$fakeFormData = ['username' => 'joe'];
+		$fakeFormData = array('username' => 'joe');
 
-		$validatorFactory->make($fakeFormData, $this->getValidationRules(), [])->willReturn($validator);
+		$validatorFactory->make($fakeFormData, $this->getValidationRules(), array())->willReturn($validator);
 		$validator->fails()->willReturn(false);
 
 		$this->validate($fakeFormData)->shouldReturn(true);
@@ -27,16 +27,16 @@ class FormValidatorSpec extends ObjectBehavior
 
 	function it_throws_an_exception_for_invalid_form_data(FactoryInterface $validatorFactory, ValidatorInterface $validator)
 	{
-		$fakeFormData = ['username' => ''];
+		$fakeFormData = array('username' => '');
 
-		$validatorFactory->make($fakeFormData, $this->getValidationRules(), [])->willReturn($validator);
+		$validatorFactory->make($fakeFormData, $this->getValidationRules(), array())->willReturn($validator);
 		$validator->fails()->willReturn(true);
-		$validator->errors()->willReturn([]);
+		$validator->errors()->willReturn(array());
 
 		$this->shouldThrow('Laracasts\Validation\FormValidationException')->duringValidate($fakeFormData);
 	}
 }
 
 class ExampleValidator extends \Laracasts\Validation\FormValidator {
-	protected $rules = ['username' => 'required'];
+	protected $rules = array('username' => 'required');
 }
