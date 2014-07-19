@@ -1,4 +1,4 @@
-<?php namespace Laracasts\Validation;
+<?php namespace mnshankar\Validation;
 
 use Laracasts\Validation\FactoryInterface as ValidatorFactory;
 use Laracasts\Validation\ValidatorInterface as ValidatorInstance;

@@ -1,4 +1,4 @@
-<?php namespace Laracasts\Validation;
+<?php namespace mnshankar\Validation;
 
 use Illuminate\Validation\Factory as Validator;
 

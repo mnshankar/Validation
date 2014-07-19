@@ -1,4 +1,4 @@
-<?php namespace Laracasts\Validation;
+<?php namespace mnshankar\Validation;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -19,8 +19,8 @@ class ValidationServiceProvider extends ServiceProvider {
 	public function register()
 	{
 		$this->app->bind(
-			'Laracasts\Validation\FactoryInterface',
-			'Laracasts\Validation\LaravelValidator'
+			'mnshankar\Validation\FactoryInterface',
+			'mnshankar\Validation\LaravelValidator'
 		);
 	}
 

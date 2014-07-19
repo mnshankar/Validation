@@ -1,15 +1,18 @@
+##Slight mods to Jeffrey Way's laracasts/validation to play nice with php 5.3+
+##if you have php 5.4+, please get laracasts/validation!
+
 ## Install With Composer
 
 ```js
 "require": {
-    "laracasts/validation": "~1.0"
+    "mnshankar/validation": "~1.0"
 }
 ```
 
 And then, if using Laravel (not required), add the service provider to `app/config/app.php` in the `providers` array.
 
 ```php
-'Laracasts\Validation\ValidationServiceProvider'
+'mnshankar\Validation\ValidationServiceProvider'
 ```
 
 ## Usage
@@ -19,7 +22,7 @@ Here's an example. Imagine that you need validation for a login form. First, cre
 ```php
 <?php namespace MyApp\Forms;
 
-use Laracasts\Validation\FormValidator;
+use mnshankar\Validation\FormValidator;
 
 class Login extends FormValidator {
 
@@ -40,7 +43,7 @@ Next, pull this object into your controller (or wherever you perform your valida
 
 ```php
 use MyApp\Forms\Login as LoginForm;
-use Laracasts\Validation\FormValidationException;
+use mnshankar\Validation\FormValidationException;
 
 // ...
 
@@ -76,7 +79,7 @@ The key is that you'll create a dedicated class for each form that you need to v
 ```php
 <?php namespace MyApp\Forms;
 
-use Laracasts\Validation\FormValidator;
+use mnshankar\Validation\FormValidator;
 
 class Registration extends FormValidator {
 

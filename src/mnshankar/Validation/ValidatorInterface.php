@@ -1,4 +1,4 @@
-<?php namespace Laracasts\Validation;
+<?php namespace mnshankar\Validation;
 
 interface ValidatorInterface {
 

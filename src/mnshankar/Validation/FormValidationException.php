@@ -1,4 +1,4 @@
-<?php namespace Laracasts\Validation;
+<?php namespace mnshankar\Validation;
 
 class FormValidationException extends \Exception {
 

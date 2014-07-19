@@ -1,9 +1,9 @@
 <?php
 
-namespace spec\Laracasts\Validation;
+namespace spec\mnshankar\Validation;
 
-use Laracasts\Validation\FactoryInterface;
-use Laracasts\Validation\ValidatorInterface;
+use mnshankar\Validation\FactoryInterface;
+use mnshankar\Validation\ValidatorInterface;
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 
@@ -11,7 +11,7 @@ class FormValidatorSpec extends ObjectBehavior
 {
 	function let(FactoryInterface $validatorFactory)
 	{
-		$this->beAnInstanceOf('spec\Laracasts\Validation\ExampleValidator');
+		$this->beAnInstanceOf('spec\mnshankar\Validation\ExampleValidator');
 		$this->beConstructedWith($validatorFactory);
 	}
 
@@ -33,10 +33,10 @@ class FormValidatorSpec extends ObjectBehavior
 		$validator->fails()->willReturn(true);
 		$validator->errors()->willReturn(array());
 
-		$this->shouldThrow('Laracasts\Validation\FormValidationException')->duringValidate($fakeFormData);
+		$this->shouldThrow('mnshankar\Validation\FormValidationException')->duringValidate($fakeFormData);
 	}
 }
 
-class ExampleValidator extends \Laracasts\Validation\FormValidator {
+class ExampleValidator extends \mnshankar\Validation\FormValidator {
 	protected $rules = array('username' => 'required');
 }
