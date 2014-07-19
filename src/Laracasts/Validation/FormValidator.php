@@ -18,7 +18,7 @@ abstract class FormValidator {
 	/**
 	 * @var array
 	 */
-	protected $messages = [];
+	protected $messages = array();
 
 	/**
 	 * @param ValidatorFactory $validator
