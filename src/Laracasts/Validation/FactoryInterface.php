@@ -10,6 +10,6 @@ interface FactoryInterface {
 	 * @param array $messages
 	 * @return ValidatorInterface
 	 */
-	public function make(array $formData, array $rules, array $messages = []);
+	public function make(array $formData, array $rules, array $messages = array());
 
 } 
