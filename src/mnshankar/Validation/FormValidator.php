@@ -1,7 +1,7 @@
 <?php namespace mnshankar\Validation;
 
-use Laracasts\Validation\FactoryInterface as ValidatorFactory;
-use Laracasts\Validation\ValidatorInterface as ValidatorInstance;
+use mnshankar\Validation\FactoryInterface as ValidatorFactory;
+use mnshankar\Validation\ValidatorInterface as ValidatorInstance;
 
 abstract class FormValidator {
 
