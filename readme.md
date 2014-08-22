@@ -1,11 +1,21 @@
 ##Slight mods to Jeffrey Way's laracasts/validation to play nice with php 5.3+
 ##if you have php 5.4+, please get laracasts/validation!
 
-## Install With Composer
+## Install With Composer via Github
 
 ```js
-"require": {
-    "mnshankar/validation": "~1.0"
+
+ "repositories": [
+        {
+            "url": "https://github.com/mnshankar/Validation.git",
+            "type": "vcs"
+        }
+    ],
+	"require": {
+		"laravel/framework": "4.1.*",
+		"mnshankar/validation":"dev-master"
+	},
+
 }
 ```
 
